@@ -107,8 +107,7 @@ p {
 
 .botao-13kg a,
 .botao-45kg a,
-.botao-20l a
-{
+.botao-20l a {
   background-color: #007bff;
   color: #ffffff;
   border-radius: 20px;
@@ -281,6 +280,23 @@ footer a,
   p {
     font-size: 14px;
     margin: 5px 0 20px;
+  }
+
+  .nav-povo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gas-povo {
+    flex: 1 1 400px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gas-povo img {
+    height: 250px;
   }
 
   .maps {
