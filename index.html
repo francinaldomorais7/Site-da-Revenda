@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <script src="scripts.js"></script>
     <title>Revenda</title>
 </head>
 
@@ -15,48 +18,77 @@
 
 <body id="home">
     <header>
-        <a href="#home">
-            <i class="fa-solid fa-house"></i>Home
-        </a>
-        <a href="#produtos">
-            <i class="fa-solid fa-boxes-stacked"></i>Produtos
-        </a>
-        <a href="#gas-povo-local">
-            <i class="fa-solid fa-child-reaching"></i>Gás do Povo
-        </a>
-        <a href="https://wa.me/5586981185663?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20gostaria%20de%20fazer%20um%20pedido"
-            target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>WhatsApp
-        </a>
-        <a href="https://search.google.com/local/writereview?placeid=ChIJ_1PnlwLLjwcRPXyPGXmkSJQ" target="_blank">
-            <i class="fa-regular fa-star"></i>Deixe sua avaliação
-        </a>
-        <a href="#google-maps">
-            <i class="fa-solid fa-location-dot"></i>Localização
-        </a>
+        <div class="wrap-nav">
+            <a href="#" class="logo">
+                <img src="/imagens/logo-redonda.png" alt="Dudu gás e água" fetchpriority="high">
+            </a>
+            <nav class="nav-links">
+
+                <a href="#produtos">
+                    <i class="fa-solid fa-boxes-stacked"></i>Produtos
+                </a>
+
+                <a href="#gas-povo-local">
+                    <i class="fa-solid fa-child-reaching"></i>Gás do Povo
+                </a>
+
+                <a href="https://wa.me/5586981185663?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20gostaria%20de%20fazer%20um%20pedido"
+                    target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>WhatsApp
+                </a>
+
+                <a href="https://search.google.com/local/writereview?placeid=ChIJ_1PnlwLLjwcRPXyPGXmkSJQ"
+                    target="_blank">
+                    <i class="fa-regular fa-star"></i>Deixe sua avaliação
+                </a>
+
+                <a href="#google-maps">
+                    <i class="fa-solid fa-location-dot"></i>Localização
+                </a>
+            </nav>
+        </div>
     </header>
 
-    <!-- LOGO DA REVENDA -->
+    <!-- CAPA -->
+    <div class="section-one">
+        <div class="img-capa">
+            <img src="/imagens/capa.jpg" alt="Capa" class="capa">
+        </div>
 
-    <img src="imagens/capa_nova.jpeg" alt="img-capa" class="baner-full">
+        <div class="box-man">
+            <h1>Nós levamos seu gás ou água até sua porta ou retire na nossa portaria.</h1>
+
+            <div class="box-input">
+                <p>
+                    Venha para a melhor revenda de gás e água mineral. Aqui você encontra os melhores produtos com a
+                    melhor
+                    qualidade e preço.
+                </p>
+                <h4>Infome seu endereço e veja a nossa disponibilidade de entrega.</h4>
+                <div class="box-row">
+                    <input id="input-adress" type="text" placeholder="Digite seu endereço">
+                    <button onclick="enviarEndereco()">Consultar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- PRODUTOS -->
-
     <h2 id="produtos">Botijão de Gás</h2>
     <p>Conheça os 2 tipos de Botijão de gás GLP</p>
 
-    <nav class="nav-geral1">
-        <nav class="nav-primaria">
+    <nav class="father-nav">
+        <nav class="son-nav">
             <img src="./imagens/13kg-gas.png" alt="gas 13kg">
 
             <div class="conteudo-13kg">
-                <h2 class="botijao13">Botijão 13kg</h2>
-                <p class="desc-botijao13">
+                <h2 class="title-produto">Botijão 13kg</h2>
+                <p class="desc-produto">
                     O botijão de gás para cozinha é um item essencial em qualquer residência ou estabelecimento
                     comercial que utilize fogão a gás. Esse tipo de gás é conhecido como gás liquefeito de petróleo
                     (GLP) e é armazenado em botijões de metal que podem ser trocados quando vazios por novos cheios.
                 </p>
-                <div class="botao-13kg">
+                <div class="btn">
                     <a href="https://wa.me/5586981185663?text=Ol%C3%A1!%20Quero%20pedir%20um%20g%C3%A1s%2013kg"
                         target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>Peça o seu aqui!
@@ -65,17 +97,17 @@
             </div>
         </nav>
 
-        <nav class="nav-segundaria">
+        <nav class="son-nav">
             <img src="./imagens/45kg-gas.png" alt="gas 45kg">
 
             <div class="conteudo-45kg">
-                <h2 class="botijao45">Botijão 45kg</h2>
-                <p class="desc-botijao45">
+                <h2 class="title-produto">Botijão 45kg</h2>
+                <p class="desc-produto">
                     Apesar de ser mais versátil e vantajoso que o gás de cozinha, nem sempre é fácil encontrar uma
                     distribuidora de gás industrial perto de você. Mais difícil ainda é conseguir comparar o preço do
                     gás e saber se está pagando caro no seu botijão industrial.
                 </p>
-                <div class="botao-45kg">
+                <div class="btn">
                     <a href="https://wa.link/t8l3jx" target="_blank">
                         <i class="fa-brands fa-whatsapp"></i>Peça o seu aqui!
                     </a>
@@ -87,20 +119,20 @@
     <h2>Água mineral</h2>
     <p>Conheça nossas água mineral</p>
 
-    <nav class="nav-geral2">
-        <nav class="nav-primaria2">
+    <nav class="father-nav">
+        <nav class="son-nav">
             <img src="./imagens/agua20L.png" alt="agua 20l">
 
             <div class="conteudo-20l">
-                <h2 class="agua20l">Galão de água 20L</h2>
-                <p class="desc-agua20l">
+                <h2 class="title-produto">Galão de água 20L</h2>
+                <p class="desc-produto">
                     O galão de água mineral de 20 litros com vasilhame é a escolha perfeita para a sua casa e/ou
                     escritório. Além da qualidade da água com um pH de 7,35, você pode se hidratar com todos os
                     benefícios que a água mais pura da natureza pode te oferecer.
                 </p>
-                <div class="botao-20l">
+                <div class="btn">
                     <a href="https://wa.link/26qr1e" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i>Peça sua água mineral aqui
+                        <i class="fa-brands fa-whatsapp"></i>Peça a sua aqui
                     </a>
                 </div>
             </div>
@@ -112,32 +144,90 @@
     <h2 id="gas-povo-local">Gás do Povo</h2>
     <p>Saiba tudo sobre o programa gás do povo</p>
 
-    <nav class="nav-povo">
-        <div class="gas-povo">
-            <img src="./imagens/logo-gas-povo.jpg" alt="logo-gas-do-povo">
+    <div class="page-container">
+
+        <!-- COLUNA IMAGEM A DIREITA -->
+        <div class="logo-wrapper">
+            <img src="./imagens/gasdopovo.jpeg" alt="Cartaz Gás do Povo" class="logo-image">
         </div>
 
-        <div class="main-criterios">
-            <h2>Quem tem direito (Requisitos)</h2>
-            <p>Para participar, a família precisa cumprir os seguintes critérios:</p>
-            <ul>
-                <li>Estar inscrita no Cadastro Único (CadÚnico) e com os dados atualizados nos últimos 24 meses.</li>
-                <li>Ter renda familiar de até meio salário-mínimo por pessoa.</li>
-                <li>Ter o CPF do Responsável Familiar regularizado na Receita Federal, sem indicação de óbito ou
-                    pendências em Averiguação Cadastral.</li>
-                <li>Prioridade: O programa prioriza famílias inscritas no Bolsa Família que tenham 2 ou mais pessoas no
-                    mesmo grupo familiar.</li>
-            </ul>
+        <!-- COLUNA INFORMAÇÕES A ESQUERDA -->
+        <div class="content-body">
 
-            <h2>Onde consultar</h2>
-            <p class="desc-povo">É possível verificar se há vale disponível, o histórico e a revenda mais próxima através do Aplicativo
-                Meu Social (disponível para Android e iOS) ou pelo Portal Cidadão - CAIXA. Em caso de dúvidas, o
-                atendimento pode ser buscado no CRAS mais próximo ou pelo telefone 121</p>
-                
-            <a class="link-consulta" href="https://gasdopovo.mds.gov.br/" target="_blank"> Consulte seu Benefício Aqui</a>
+            <!-- SECAO REQUISITOS -->
+            <div>
+                <h2 class="section-title"><i class="fa-solid fa-address-card"></i> Quem tem direito (Requisitos)</h2>
+                <p class="subtitle">Para participar, a família precisa cumprir os seguintes critérios:</p>
+
+                <div class="requirements-list">
+                    <!-- Item 1 -->
+                    <div class="req-item">
+                        <i class="fa-solid fa-circle-check req-icon"></i>
+                        <div class="req-info">
+                            <h3>Cadastro Único (CadÚnico)</h3>
+                            <p>Estar devidamente inscrita no programa e com os dados cadastrais atualizados nos últimos
+                                24
+                                meses.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="req-item">
+                        <i class="fa-solid fa-circle-check req-icon"></i>
+                        <div class="req-info">
+                            <h3>Renda Familiar Mínima</h3>
+                            <p>Possuir renda familiar mensal de até meio salário-mínimo por pessoa da casa.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="req-item">
+                        <i class="fa-solid fa-circle-check req-icon"></i>
+                        <div class="req-info">
+                            <h3>CPF Regularizado</h3>
+                            <p>O CPF do Responsável Familiar deve estar regular junto à Receita Federal, sem indicação
+                                de
+                                óbito ou pendências em Averiguação Cadastral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAIXA DE PRIORIDADE -->
+            <div class="priority-box">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div class="priority-text">
+                    <p><strong>Critério de Prioridade:</strong> O programa prioriza famílias inscritas no Bolsa Família
+                        que tenham 2 ou mais pessoas no mesmo grupo familiar.</p>
+                </div>
+            </div>
+
+            <!-- Seção Onde Consultar -->
+            <div class="consultation-section">
+                <h2 class="section-title" style="font-size: 20px; border: none; padding: 0;"><i
+                        class="fa-solid fa-magnifying-glass"></i> Onde consultar</h2>
+                <p class="subtitle" style="margin: 5px 0 0 0;">É possível verificar se há vale disponível, conferir o
+                    histórico e achar a revenda mais próxima:</p>
+
+                <div class="consultation-channels">
+                    <a href="https://www.google.com/goto?url=CAESjQEB6zswFd6zXij16Qz4xtBS0s-ftotkLrkI4nSt6Crdc2_dTKbkkAeczj4N0oVkjBgYF6bouFSHZK7HEwpbkSdUfs8cjIHB0GAYHq2FU3ltx8lbhgcGpsLE_ezJywrU05ZcsACc7B3eTmemI8CYGTcrh3JTFbv0ymXHPzW3vQHG7LdrTk8H_JQ80m0vo5c"
+                        class="channel-btn" target="_blank"><i class="fa-solid fa-mobile-screen-button"></i> Aplicativo
+                        Meu
+                        Social</a>
+                    <a href="https://cidadao.caixa.gov.br/frontpage" target="_blank" class="channel-btn"><i
+                            class="fa-solid fa-globe"></i> Portal Cidadão - CAIXA</a>
+                </div>
+
+                <p class="support-info"><i class="fa-solid fa-phone"></i> Em caso de dúvidas, busque o <strong>CRAS mais
+                        próximo</strong> ou ligue no telefone <strong>121</strong></p>
+            </div>
+
+            <!-- Botão de Chamada Principal -->
+            <a href="https://gasdopovo.mds.gov.br/" target="_blank" class="main-cta-btn">
+                <i class="fa-solid fa-wallet"></i> Consulte seu Benefício Aqui
+            </a>
         </div>
-
-    </nav>
+    </div>
 
     <!-- GOOGLE MAPS IFRAME -->
 
@@ -149,7 +239,7 @@
     <div class="iframe-maps">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4913.9114005071415!2d-42.79818987038524!3d-5.272818248698652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78fcb0297e753ff%3A0x9448a479198f7c3d!2sRevenda%20Dudu%20do%20g%C3%A1s!5e0!3m2!1spt-BR!2sbr!4v1791762701830!5m2!1spt-BR!2sbr"
-            width="95%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            width="90%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
 </body>
@@ -157,39 +247,72 @@
 <!-- RODA PE DA PAGINA -->
 
 <footer>
-    <nav class="footer-content">
-        <p>© 2026 Revenda Dudu do Gás. Todos os direitos reservados.<br>
-            CNPJ: 12.345.678/0001-90.<br>
-            Rua. 20, cerâmica cil, 64041-430 Teresina - Pi</p>
-    </nav>
+    <div class="footer-container">
 
-    <nav class="footer-icons">
-        <p id="canais">Nossos canais</p>
+        <!-- Bloco 1: Informações da Revenda -->
+        <div class="footer-section footer-revenda">
+            <h3>Dudu do Gás</h3>
+            <p class="cnpj">CNPJ: 12.345.678/0001-90</p>
+            <address>
+                <i class="fa-solid fa-location-dot"></i> Rua 20, Cerâmica Cil<br>
+                CEP 64041-430 — Teresina - PI
+            </address>
+        </div>
 
-        <a href="https://www.instagram.com/rev.dudugas/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://wa.me/5586981185663?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20gostaria%20de%20fazer%20um%20pedido"
-            target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://www.facebook.com/ultragazdududogas/" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-    </nav>
+        <!-- Bloco 2: Canais da Revenda -->
+        <div class="footer-section footer-icons">
+            <p class="section-title">Nossos canais</p>
+            <ul class="icons-list">
+                <li>
+                    <a href="https://www.instagram.com/rev.dudugas/" target="_blank" aria-label="Instagram da Revenda">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/5586981185663?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20gostaria%20de%20fazer%20um%20pedido"
+                        target="_blank" aria-label="WhatsApp da Revenda">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/ultragazdududogas/" target="_blank"
+                        aria-label="Facebook da Revenda">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-    <nav class="desenvolvedor">
-        <p id="contato">Desenvolvido por Francinaldo</p>
-        <a href="https://wa.me/5586981185663" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/francinaldo-morais-da-silva/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/nalldo_s01/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-    </nav>
+        <!-- Bloco 3: Créditos do Desenvolvedor -->
+        <div class="footer-section footer-desenvolvedor">
+            <p class="section-title">Desenvolvido por Francinaldo</p>
+            <ul class="icons-list">
+                <li>
+                    <a href="https://wa.me/5586981185663" target="_blank" aria-label="WhatsApp do Desenvolvedor">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/francinaldo-morais-da-silva/" target="_blank"
+                        aria-label="LinkedIn do Desenvolvedor">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/nalldo_s01/" target="_blank"
+                        aria-label="Instagram do Desenvolvedor">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Barra de Direitos Autorais (Rodapé inferior) -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Revenda Dudu do Gás. Todos os direitos reservados.</p>
+    </div>
 </footer>
 
 </html>
