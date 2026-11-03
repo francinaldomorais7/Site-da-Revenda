@@ -88,8 +88,9 @@ header {
   padding: 14px 15px;
   border: 2px solid #0a68f5;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 20px;
   margin: 10px 20px;
+  text-align: center;
 }
 
 .box-row button {
@@ -537,12 +538,17 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-  body {
-    padding-top: 0;
-  }
-
   header {
     display: none;
+  }
+
+  .section-one {
+    padding: 2px;
+  }
+
+  .capa {
+    border-radius: 3px;
+    margin-top: 0;
   }
 
   .box-man {
@@ -565,6 +571,8 @@ footer {
     width: 20px;
     padding: 12px;
     width: 50%;
+    font-size: 10px;
+    text-align: center;
   }
 
   .son-nav {
